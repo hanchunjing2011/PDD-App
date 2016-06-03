@@ -1,0 +1,68 @@
+*{
+  border:0px; 
+  margin:0px;
+  padding:0px;
+  -webkit-font-smoothing: antialiased;
+}
+/************************
+  公用样式
+************************/
+html,body{height: 100%;width: 100%;}
+body{font-family: "微软雅黑"; overflow: hidden;}
+*{padding: 0; margin:0;box-sizing: border-box; list-style: none;font-family: "微软雅黑";}
+@font-face{font-family:'KaufmannBTRegular';src:url('http://26.nbpal.com/images/KaufmannBTRegular.eot');src:local('KaufmannBTRegular'),local('KaufmannBTRegular'),url('http://26.nbpal.com/images/KaufmannBTRegular.woff') format('woff'),url('http://26.nbpal.com/images/KaufmannBTRegular.ttf') format('truetype'),url('http://26.nbpal.com/images/KaufmannBTRegular.svg#KaufmannBTRegular') format('svg');}
+
+
+//公共滚动条样式部分
+::-webkit-scrollbar{
+  width: 9px;
+  height:9px;
+}
+::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb{ /* 1 */
+  border-radius:10px!important;
+  background-color: #E4E1E1;
+  margin-right:3px;
+}
+:hover::-webkit-scrollbar-thumb { /* 2 */
+  background-color:#C5C2C2;
+}
+::-webkit-scrollbar-thumb:hover { /* 3 */
+  background-color: #C5C2C2;
+}
+::-webkit-scrollbar-thumb:active { /* 4 */
+  background-color: #908C8C;
+}
+
+
+
+#root{
+  width:100%;
+  height:100%;
+}
+
+.App{
+  width:100%;
+  height:100%;
+}
+
+.clear{
+  clear:both;
+}
+
+button,input{
+  outline:none;
+}
+ul{
+  list-style:none;
+}
+
+
+
+
+
+
+@import "./Welcome.scss";
+@import "./List.scss";

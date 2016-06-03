@@ -1,0 +1,75 @@
+.WelcomePage{
+	width:100%;
+	height:100%;
+	border-radius:10px;
+	box-shadow: 1px 1px 1px ;
+	.showPDD{
+		width:100%;
+		height:100%;
+		position:relative;
+		p{
+			position:absolute;
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			text-align: center;
+		}
+		.showWel{
+			top:210px;
+		}
+		.showNik{
+			bottom:70px;
+		}
+		.showName{
+			bottom:230px;
+		}
+		.showEmail{
+			bottom:22px;
+			font-size:13px;
+		}
+		.showRights{
+			bottom:0px;
+			font-size:12px;
+		}
+	}
+}
+
+
+
+
+
+
+
+.WelcomePage-default{
+	.showPDD{
+		background-image:url('../public/img/welcome/welcome-background-default.png');
+		background-size:100%;
+		background-position:center;
+		background-repeat:no-repeat;
+		p{
+			color: #c7bfbf;
+		}
+		.ConverHeader{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:40px;
+			opacity:0;
+			div{
+				background-size:100%;
+				background-position:center;
+				background-repeat:no-repeat;
+			}
+			.setting{
+				background-image:url();
+			}
+			.close{
+				background-image:url();
+			}
+			.in{
+				background-image:url();
+			}
+		}
+	}
+}
