@@ -9,5 +9,6 @@ export const list = {
   width:300,
   height:300,
   frame: false,
-  show: true
+  show: false,
+  resizable: true
 }

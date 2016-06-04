@@ -1,40 +1,41 @@
-import sqlite3 from 'sqlite3'
-import bookshelf from 'bookshelf'
-import { DB } from '../common/contants'
+import { DB, DBPATH } from '../common/contants'
 import path from 'path'
+import nedb from 'nedb'
+import fs from 'fs'
 
 
 
-
-
-
-
-
-
-
-
-let userDB = null
-const sep = path.sep
-const sqlite = sqlite3.verbose()
-const file = DB + sep + 'database.db'
-
-if(!fs.existsSync(DB)){
-  fs.mkdirSync(DB)
+const dbfile = DBPATH + path.sep + DB 
+if(fs.existsSync(DBPATH)){
+  fs.mkdirSync(DBPATH)
 }
 
-
-
-export const dao = {
-  setDB: function () {
-    userDB = new sqlte.Database(file)
-    let userORM = dao.userORM = bookshelf.initialize({
-      client: 'sqlite3',
-      connection: {
-        filename: file
-      }
-    })
-    this.userDB = userDB
-  }
+if(fs.existsSync(dbfile)){
+  fs.mkdirSync(dbfile)
 }
+
+const db = new nedb({
+  filename: '../db/database.db'
+})
+db.loadDatabase(function (err){
+})
+
+let doc = {
+  hello:'hello',
+  n:5,
+  today:new Date()
+}
+
+db.insert(doc, function (err, newDOC){
+})
+
+
+
+db.insert([{n:5,hello:'xxx'},{n:5,hello:'dddd'}])
+
+
+db.find({n:5}, function (err, docs){
+  console.log(docs)
+})
 
 

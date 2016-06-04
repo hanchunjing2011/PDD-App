@@ -20,6 +20,8 @@ export default class Welcome extends Component {
   }
 
   componentDidMount() {
+
+    //加载完成之后打开页面  闪光hack
     $(document).ready(() => {
       let obj = {
         winID: 'welcome'
@@ -27,21 +29,42 @@ export default class Welcome extends Component {
       ipcRenderer.send(window_show, obj)
       ipcRenderer.send(window_focus, obj)
     })
+
+
+
+    //鼠标进入header显示区域动画
+    $(document).on('mouseenter', ".showPDD", function () {
+      $('.ConverHeader').animate({
+        height:'40px',
+        opacity:1
+      })
+    })
+    $(document).on('mouseleave', ".showPDD", function () {
+      $('.ConverHeader').animate({
+        height:'0px',
+        opacity:0
+      })
+    })
+
+
+
+
+
     setTimeout(() => {
       ipcRenderer.send(window_open,{
         winID:'list',
         options: list
       })
-      // ipcRenderer.send(window_close,{
-      //   winID:'welcome'
-      // })
+      ipcRenderer.send(window_close,{
+        winID:'welcome'
+      })
     },1000)
   }
   render(){
     return (
       <div className="WelcomePage drag WelcomePage-default">
-        <CoverHeader winID=""></CoverHeader>
         <div className="showPDD">
+          <CoverHeader winID="welcome"></CoverHeader>
           <p className="showWel">Welcome To My World</p>
           <p className="showName">PDD&张椿木</p>
           <p className="showEmail">1575455507@qq.com</p>

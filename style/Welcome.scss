@@ -1,7 +1,7 @@
 .WelcomePage{
 	width:100%;
 	height:100%;
-	border-radius:10px;
+	padding:0 20px 20px 20px;
 	box-shadow: 1px 1px 1px ;
 	.showPDD{
 		width:100%;
@@ -15,7 +15,7 @@
 			text-align: center;
 		}
 		.showWel{
-			top:210px;
+			top:170px;
 		}
 		.showNik{
 			bottom:70px;
@@ -39,37 +39,32 @@
 
 
 
-
 .WelcomePage-default{
+	background-image:url('../public/img/welcome/welcome-background-default.png');
+	background-size:100%;
+	background-position:center;
+	background-repeat:no-repeat;
 	.showPDD{
-		background-image:url('../public/img/welcome/welcome-background-default.png');
-		background-size:100%;
-		background-position:center;
-		background-repeat:no-repeat;
 		p{
 			color: #c7bfbf;
 		}
 		.ConverHeader{
+			background-color:#fff;
 			position:absolute;
 			top:0px;
-			left:0px;
-			width:100%;
-			height:40px;
+			left:-20px;
+			width:350px;
+			height:0px;
+			z-index:1;
 			opacity:0;
 			div{
-				background-size:100%;
-				background-position:center;
-				background-repeat:no-repeat;
-			}
-			.setting{
-				background-image:url("");
-			}
-			.close{
-				background-image:url();
-			}
-			.in{
-				background-image:url();
+				cursor:pointer;
+				float:right;
+				width:40px;
+				height:40px;
 			}
 		}
+		@import "./DefaultConverHeader.scss";
 	}
+	
 }

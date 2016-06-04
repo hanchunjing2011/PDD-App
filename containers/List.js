@@ -37,13 +37,11 @@ export default class List extends Component {
     return (
       <div className="ListPage drag ListPage-default">
         <div className="outBox">
-          <div className="func-icon first"></div>
-          <div className="func-icon second"></div>
-          <div className="func-icon third"></div>
-          <div className="func-icon forth"></div>
-          <div className="func-icon fifth"></div>
-          <div className="func-icon sixth"></div>
-          <div className="func-icon seventh"></div>
+          <div className="wrap"><div className="func-icon first" title="酷爱音乐"></div></div>
+          <div className="wrap"><div className="func-icon second" title="精彩视频"></div></div>
+          <div className="wrap"><div className="func-icon third" title="任务卡片"></div></div>
+          <div className="wrap"><div className="func-icon forth" title="挽留瞬间"></div></div>
+          <div className="wrap"><div className="func-icon fifth" title="落笔回忆"></div></div>
         </div>
       </div>
     )

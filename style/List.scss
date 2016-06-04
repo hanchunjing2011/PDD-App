@@ -1,52 +1,60 @@
 .ListPage{
 	width:100%;
 	height:100%;
-
+	padding-top:25px;
+	background-size:100% 100%;
+	background-position:center;
+	background-repeat:no-repeat;
 	.outBox{
-		width:100%;
-		height:100%;
+		width:250px;
+		height:250px;
+		margin:0 auto;
 		position:relative;
-		background-size:100% 100%;
-		background-position:center;
-		background-repeat:no-repeat;
-		div{
-			background-size:100% 100%;
-			background-position:center;
-			background-repeat:no-repeat;
+		.wrap{
+			border-radius:15px;
 			width:70px;
 			height:70px;
+			margin-left:10px;
+			margin-top:10px;
+			float:left;
+			.func-icon{
+				background-image:url('../public/img/list/list-funcicon-default.png');
+				background-repeat:no-repeat;
+				background-size:333px 485px;
+				cursor:pointer;
+				float:left;
+				width:60px;
+				height:60px;
+				margin-left:5px;
+				margin-top:5px;
+				border-radius:10px;
+			}
+			.first{
+				background-position:-98px -114px;
+			}
+			.second{
+				background-position:-98px -24px;
+			}
+			.third{
+				background-position:-255px -24px;
+			}
+			.forth{
+				background-position:-19px -24px;
+			}
+			.fifth{
+				background-position:-176px -24px;
+			}
+			.sixth{
+				display:none;
+			}
+			.seventh{
+				display:none;
+			}
 		}
-		.func-icon{
-			position:absolute;
+		.wrap:hover{
+			background-color:#00a3e2;
 		}
-		.first{
-			top:45px;
-			left:115px;
-		}
-		.second{
-			top:79px;
-			left:64px;
-		}
-		.third{
-			top:79px;
-			left:166px;
-		}
-		.forth{
-			top:112px;
-			left:115px;
-		}
-		.fifth{
-			top:146px;
-			left:64px;
-		}
-		.sixth{
-			top:146px;
-			left:165px;
-		}
-		.seventh{
-			top:180px;
-			left:115px;
-		}
+
 	}
 }
 
@@ -57,10 +65,8 @@
 
 
 .ListPage-default{
+	background-image:url("../public/img/list/list-background-default.jpg");
 	.outBox{
-		background-image:url("../public/img/list/list-background-default.png");
-		div{
-			background-image:url("../public/img/list/list-function-icon-default.png");
-		}
+
 	}
 }

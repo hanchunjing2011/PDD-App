@@ -11,12 +11,14 @@ import {
   showWindowID,
   closeWindowID,
   focusWindowID,
-  openWindowID
+  openWindowID,
+  minWindowID,
+  maxWindowID,
+  quitApp
 } from './mainProcess/listenEvent'
 import { welcome } from './renderProcess/winOptions'
-// import { dao } from './dao/dao'
+import { dao } from './dao/dao'
 // import { logger } from './common/log4js'
-
 
 let dataGlobal = {}
 dataGlobal.win = []
@@ -55,5 +57,8 @@ showWindowID(ipcMain, dataGlobal)
 closeWindowID(ipcMain, dataGlobal)
 focusWindowID(ipcMain, dataGlobal)
 openWindowID(ipcMain, dataGlobal, BrowserWindow)
+minWindowID(ipcMain, dataGlobal)
+maxWindowID(ipcMain, dataGlobal)
+quitApp(ipcMain, app)
 // openDevtools(ipcMain, dataGlobal)
 // closeDevtools(ipcMain, dataGlobal)

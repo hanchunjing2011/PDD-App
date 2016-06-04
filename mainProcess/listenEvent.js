@@ -4,7 +4,9 @@ import {
     showWindow,
     focusWindow,
     openWindow,
-    getPosition
+    getPosition,
+    minWindow,
+    maxWindow
   } from './desktop'
 import { 
 		window_move_to, 
@@ -13,7 +15,10 @@ import {
     window_show,
     window_close,
     window_focus,
-    window_open 
+    window_open,
+    window_min,
+    window_max,
+    app_close
 	} from '../communicate/communicationTypes'
 
 
@@ -51,7 +56,6 @@ export function showWindowID (ipcMain, dataGlobal) {
 export function closeWindowID (ipcMain, dataGlobal) {
   ipcMain.on(window_close, (event, arg) => {
     let winID = arg.winID
-    console.log(winID)
     closeWindow(dataGlobal.win[winID])
   })
 }
@@ -67,5 +71,24 @@ export function openWindowID (ipcMain, dataGlobal, win) {
     let options = arg.options
     let newWin = openWindow(win, winID, options)
     dataGlobal.win[winID] = newWin
+  })
+}
+
+export function minWindowID (ipcMain, dataGlobal) {
+  ipcMain.on(window_min, (event, arg) => {
+    let winID = arg.winID
+    minWindow(dataGlobal.win[winID])
+  })
+}
+export function maxWindowID (ipcMain, dataGlobal) {
+  ipcMain.on(window_max, (event, arg) => {
+    let winID = arg.winID
+    maxWindow(dataGlobal.win[winID])
+  })
+}
+
+export function quitApp (ipcMain, app) {
+  ipcMain.on(app_close, (event, arg) => {
+    app.quit()
   })
 }

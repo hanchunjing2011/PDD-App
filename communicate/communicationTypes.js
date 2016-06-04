@@ -5,3 +5,6 @@ export const window_show = 'window-show'
 export const window_close = 'window-close'
 export const window_focus = 'window-focus'
 export const window_open = 'window-open'
+export const window_min = "window-min"
+export const window_max = "window-max"
+export const app_close = "app-close"

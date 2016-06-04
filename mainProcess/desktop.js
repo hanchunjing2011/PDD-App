@@ -19,39 +19,19 @@ export function openWindow(win, winID, options){
   return newWin
 }
 
-// export function openWelcome (win) {
-//   // let url = '../index.html#/welcome'
-//   let url = `file://${ROOT}/index.html#/welcome`
-//   let options = {
-//     // width:350,
-//     // height:500,
-//     // frame: false,
-//     // show: false
-//   }
-//   let winID = 'welcome'
-//   return openWindow(win, winID, options, url)
-// }
+export function minWindow (win) {
+  win.minimize()
+}
+export function maxWindow (win) {
+  win.maximize()
+}
+export function closeApp () {
 
-// export function openList (win) {
-//   let url = `file://${ROOT}/index.html#/list`
-//   let options = {
-//     width:350,
-//     height:500,
-//     frame: false,
-//     show: true
-//   }
-//   let winID = 'list'
-//   return openWindow(win, winID, options, url)
-// }
-
-
-
-
+}
 
 
 //close window
 export function closeWindow (win) {
-  console.log(win)
   win.close()
   win = null
 }
