@@ -6,18 +6,17 @@ import fs from 'fs'
 
 
 const dbfile = DBPATH + path.sep + DB 
-if(fs.existsSync(DBPATH)){
+if(!fs.existsSync(DBPATH)){
   fs.mkdirSync(DBPATH)
 }
 
-if(fs.existsSync(dbfile)){
-  fs.mkdirSync(dbfile)
-}
+
 
 const db = new nedb({
-  filename: '../db/database.db'
+  filename: dbfile
 })
 db.loadDatabase(function (err){
+  
 })
 
 let doc = {
@@ -26,16 +25,5 @@ let doc = {
   today:new Date()
 }
 
-db.insert(doc, function (err, newDOC){
-})
-
-
-
-db.insert([{n:5,hello:'xxx'},{n:5,hello:'dddd'}])
-
-
-db.find({n:5}, function (err, docs){
-  console.log(docs)
-})
 
 

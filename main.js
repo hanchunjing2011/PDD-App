@@ -17,13 +17,13 @@ import {
   quitApp
 } from './mainProcess/listenEvent'
 import { welcome } from './renderProcess/winOptions'
-import { dao } from './dao/dao'
-// import { logger } from './common/log4js'
-
+// import { logger } from './modules/logger'
+import { logger } from './common/logger'
 let dataGlobal = {}
 dataGlobal.win = []
 
 app.on('ready', () => {
+  logger.info('app is ready')
   let newWin = openWindow(BrowserWindow, 'welcome', welcome)
   dataGlobal.win['welcome'] = newWin
 })

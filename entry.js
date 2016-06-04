@@ -34,7 +34,7 @@ import './style/App.scss'
 // window.console.log('entry')
 
 
-console.log(store.getState())
+// console.log(store.getState())
 render(
   <Provider store={store}>
     <Router>
