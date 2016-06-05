@@ -6,7 +6,7 @@ import { conv } from '../common/config'
 import { skinConv } from '../common/skin'
 import { ipcRenderer } from 'electron'
 import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
-
+import { todo as todoOptions } from '../renderProcess/winOptions'
 
 
 
@@ -29,6 +29,14 @@ export default class List extends Component {
       ipcRenderer.send(window_focus, obj)
     })
   }
+  getIn(type){
+    if(type == 'todo'){
+      ipcRenderer.send(window_open, {
+        winID:'todo',
+        options: todoOptions
+      })
+    }
+  }
   render(){
     const skin = this.props.skin
     const listConfig = skin.config.list
@@ -39,7 +47,9 @@ export default class List extends Component {
         <div className="outBox">
           <div className="wrap"><div className="func-icon first" title="酷爱音乐"></div></div>
           <div className="wrap"><div className="func-icon second" title="精彩视频"></div></div>
-          <div className="wrap"><div className="func-icon third" title="任务卡片"></div></div>
+          <div className="wrap"><div className="func-icon third" title="任务卡片" onClick={() => {
+            this.getIn('todo')
+          }}></div></div>
           <div className="wrap"><div className="func-icon forth" title="挽留瞬间"></div></div>
           <div className="wrap"><div className="func-icon fifth" title="落笔回忆"></div></div>
         </div>

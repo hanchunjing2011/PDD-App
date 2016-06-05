@@ -6,6 +6,7 @@ import App from './containers/App'
 // import TodoHome from './components/TodoHome'
 import Welcome from './containers/Welcome'
 import List from './containers/List'
+import Todo from './containers/Todo'
 // import MusicHome from './components/MusicHome'
 // import TodoEdit from './components/TodoEdit'
 // import TodoDone from './components/TodoDone'
@@ -41,6 +42,7 @@ render(
       <Route path="/" component={App} >
         <Route path="/welcome" component={Welcome}/>
         <Route path="/list" component={List}/>
+        <Route path="/todo" component={Todo}/>
       </Route>
     </Router>
   </Provider>,
