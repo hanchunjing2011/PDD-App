@@ -1,0 +1,152 @@
+.LoginPage{
+  width:100%;
+  height:100%;
+  padding-top:150px;
+  .container-box{
+    width:100%;
+    height:300px;
+    width:800px;
+    margin: 0 auto;
+    .col-sm-5{
+      img{
+        vertical-align: middle;
+        display: inline-block;
+        margin: 0 auto;
+        margin-left: 80px;
+        margin-top: 20px;
+      }
+      p.box-name{
+        padding-top:5px;
+        margin-bottom:0px;
+      }
+      p{
+        text-align:center;
+        padding-left:45px;
+      }
+    }
+    .col-sm-7{
+      padding-left: 50px;
+      padding-right: 60px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      .login-box{
+        position:relative;
+        border-radius:10px;
+        padding:40px;
+        .login-nav{
+          padding:20px;
+          .login-group{
+            margin-bottom:10px;
+            width:235px;
+          }
+          .input-group{
+            position:relative;
+            input{
+              border-radius:5px;
+            }
+            .fui-cross{
+              display: none;
+              position: absolute;
+              top: 7px;
+              left: 225px;
+              color: red;
+              cursor: pointer;
+            }
+          }
+          .sinup-group{
+            margin-bottom:8px;
+            width:214px;
+          }
+          .button-box{
+            width: 235px;
+            margin-top: 12px;
+            height: 30px;
+          }
+          .button-box.sinup{
+            width:214px;
+          }
+          button.login{
+            width:100px;
+            cursor:pointer;
+            border:none;
+            float:left;
+          }
+          button.sinup{
+            width:100px;
+            cursor:pointer;
+            border:none;
+            float:left;
+          }
+          button.login.left{
+            margin-left:12px;
+          }
+          button.login.right{
+            margin-left:10px;
+          }
+          button.sinup.left{
+            margin-left:0px;
+          }
+          button.sinup.right{
+            margin-left:14px;
+          }
+        }
+        .pointer-left{
+          width: 40px;
+          height: 40px;
+          top:105px;
+          font-size: 42px;
+          left: -39px;
+          position:absolute;
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+  .container-box [class ^="col-"]{
+    height:100%;
+  }
+}
+
+
+
+
+
+.LoginPage-def{
+  background-image: url('../img/login/LoginPage-def-bg.jpg');
+  background-size:100% 100%;
+  background-position:center;
+  background-repeat:no-repeat;
+  .container-box{
+    .col-sm-5{
+      p{
+        color:#fff;
+        font-family:"Microsoft Yahei";
+      }
+      p.auth-name{
+        font-family:"sans-serif";
+      }
+    }
+    .login-box{
+      .pointer-left{
+        color: #169375;
+      }
+      background-color:#169375;
+      .login-nav{
+        background-color:#ECEFF1;
+        button.login{
+          background-color:#19BC9C;
+        }
+        button.sinup{
+          background-color:#19BC9C;
+        }
+        button.login:hover{
+          background-color:#169375;
+        }
+        button.sinup:hover{
+          background-color:#169375;
+        }
+      }
+    }
+  }
+}
+

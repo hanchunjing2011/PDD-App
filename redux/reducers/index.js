@@ -6,7 +6,8 @@ import {
   config,
   todo,
   diary,
-  skin
+  skin,
+  status
  } from './reducers'
 
 const rootReducer = combineReducers({
@@ -16,7 +17,8 @@ const rootReducer = combineReducers({
   config,
   todo,
   diary,
-  skin
+  skin,
+  status
 })
 
 export default rootReducer

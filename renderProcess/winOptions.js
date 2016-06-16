@@ -2,8 +2,8 @@ export const welcome = {
   width:350,
   height:500,
   frame: false,
-  show: false,
-  resizable: false
+  show: true,
+  resizable: true
 }
 export const list = {
   width:300,
@@ -19,4 +19,11 @@ export const todo = {
   frame: false,
   show: true,
   resizable: true
+}
+
+export const login = {
+  width:800,
+  height:600,
+  frame: false,
+  show: true
 }

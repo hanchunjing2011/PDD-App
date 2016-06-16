@@ -7,7 +7,8 @@ import {
   CONFIG,
   TODO,
   DIARY,
-  SKIN
+  SKIN,
+  STATUS
 } from './actionsTypes'
 
 
@@ -57,5 +58,11 @@ export function newSkin (skin) {
   return {
     type: SKIN,
     skin: skin
+  }
+}
+export function newStatus (status) {
+  return {
+    type: STATUS,
+    status: status
   }
 }

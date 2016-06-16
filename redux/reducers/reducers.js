@@ -5,7 +5,8 @@ import {
   CONFIG,
   TODO,
   DIARY,
-  SKIN
+  SKIN,
+  STATUS
 } from '../actions/actionsTypes'
 
 // import { musicDB } from '../../common/musicDB'
@@ -16,7 +17,7 @@ import {
 // import { diaryDB } from '../../common/diaryDB'
 import { skinConv } from '../../common/skin'
 import Immutable from 'immutable'
-
+import { conv } from '../../common/config' 
 
 
 
@@ -79,11 +80,35 @@ import Immutable from 'immutable'
 // diaryInit.showLeft = false
 
 let musicInit = {xxx:'xxx'}
-let userInit = {xxx:'xxx'}
 let photoInit = {}
 let configInit = {}
 let todoInit = {}
 let diaryInit = {}
+
+
+//users
+let userInit = conv.get('users')
+if(!userInit){
+  conv.set('users', {})
+  conv.save()
+  userInit = conv.get('users')
+}
+
+
+
+
+
+
+
+//status
+let statusInit = {}
+statusInit.loginStatus = {}
+statusInit.loginStatus.loging = true
+
+
+
+
+
 
 //skin
 let pageConfig = skinConv.get('config')
@@ -161,6 +186,16 @@ export function skin (state = skinInit, action) {
   switch (action.type) {
     case SKIN:
       let nextState = Immutable.Map(state).merge(action.skin).toJS()
+      return nextState
+    default:
+      return state
+  }
+}
+
+export function status (state = statusInit, action) {
+  switch (action.type) {
+    case STATUS:
+      let nextState = Immutable.Map(state).merge(action.status).toJS()
       return nextState
     default:
       return state

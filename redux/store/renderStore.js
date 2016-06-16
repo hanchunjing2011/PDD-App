@@ -23,5 +23,9 @@ let enhancer = compose(
 
 
 
-export let store = createStore(rootReducers, initialState, enhancer);
+let store = createStore(rootReducers, initialState, enhancer);
+let dispatch = store.dispatch
+let getState = store.getState
+export { store, dispatch, getState }
+
 

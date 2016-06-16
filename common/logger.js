@@ -1,4 +1,4 @@
-import bunyan from 'bunyan'
+import { initlogger, getLogger } from 'PDD-log4js-es5'
 import fs from 'fs'
 import path from 'path'
 import { LOGPATH } from './contants'
@@ -14,17 +14,29 @@ const logfile = LOGPATH+path.sep + uuid() + '.log'
 
 
 
-export const logger = bunyan.createLogger({
-  name: 'myapp',
-  streams: [
-    {
-      level: 'info',
-      stream: process.stdout            // log INFO and above to stdout
-    },
-    {
-      level: 'info',
-      path: logfile  // log ERROR and above to a file
-    }
-  ]
-});
+
+initlogger([
+  {
+    cheese:'xxxxxx',
+    format:'MM-DD-YYYY HH:mm:ss',
+    file:'./xxxx/datalog.log',
+    level: 'INFO',
+    backups:10,
+    limitSize:5
+  },
+  {
+    cheese:'yyyyyyyy',
+    format:'MM-DD-YYYY HH:mm:ss',
+    file:logfile,
+    level: 'INFO',
+    backups:10,
+    limitSize:5
+  }
+])
+
+
+export const logger = getLogger('yyyyyyyy')
+logger.info('xxxxxx')
+logger.log('getget')
+
 //获取到logger
