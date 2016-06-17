@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import { dispatch } from '../redux/store/renderStore'
-import { newStatus } from '../redux/actions/actions'
+import { newStatus, newUser } from '../redux/actions/actions'
 import $ from 'jquery'
 import { conv } from '../common/config'
 import cs from 'classnames'
@@ -19,10 +19,17 @@ export default class Login extends Component {
   constructor(){
     super()
     this.state = {
-      canLogin: false,
       canAccount: false,
       canPassword: false,
       canRePassword: false
+    }
+  }
+  componentWillUpdate(nextProps, nextState) {
+    let { canAccount, canPassword, canRePassword } = nextState
+    if(canAccount && canPassword && canRePassword){
+      $('#sinupAccount').css("cursor","pointer")
+    }else{
+      $('#sinupAccount').css('cursor', 'not-allowed')
     }
   }
   render(){
@@ -68,18 +75,18 @@ export default class Login extends Component {
       <div className="login-nav">
         <div className="input-group sinup-group">
           <span className="fui-cross"></span>
-          <input type="text" id="sinAccount" className="form-control" placeholder="account" onBlur={() => {this.verifySinAccount('sinAccount')}} onFocus={() => {this.clearAll('sinAccount')}}/>
+          <input type="text" id="sinAccount" className="form-control" placeholder="account" onKeyUp={() => {this.verifySinAccount('sinAccount')}} onFocus={() => {this.clearAll('sinAccount');}} onBlur={() => {this.verifySinAccount('sinAccount')}}/>
         </div>
         <div className="input-group sinup-group">
           <span className="fui-cross"></span>
-          <input type="password" id="sinPassword" className="form-control" placeholder="password" onBlur={() => {this.verifySinPassword('sinPassword')}} onFocus={() => {this.clearAll('sinPassword')}}/>
+          <input type="password" id="sinPassword" className="form-control" placeholder="password" onKeyUp={() => {this.verifySinPassword('sinPassword')}} onFocus={() => {this.clearAll('sinPassword');}} onBlur={() => {this.verifySinPassword('sinPassword')}}/>
         </div>
         <div className="input-group sinup-group">
           <span className="fui-cross"></span>
-          <input type="password" id="sinRePassword" className="form-control" placeholder="repassword" onBlur={() => {this.verifySinRePassword('sinRePassword')}} onFocus={() => {this.clearAll('sinRePassword')}}/>
+          <input type="password" id="sinRePassword" className="form-control" placeholder="repassword" onKeyUp={() => {this.verifySinRePassword('sinRePassword')}} onFocus={() => {this.clearAll('sinRePassword');}} onBlur={() => {this.verifySinRePassword('sinRePassword')}}/>
         </div>
         <div className="button-box sinup">
-          <button id="sinupAccount" className="btn btn-hg btn-primary sinup left" onClick={() => {this.singUp()}} onMouseOver={() => {this.verifyCanSinup('sinupAccount')}}>完成注册</button>
+          <button id="sinupAccount" className="btn btn-hg btn-primary sinup left" onClick={() => {this.singUp()}}>完成注册</button>
           <button className="btn btn-hg btn-primary sinup right" onClick={() => {this.changeStatus('tologin')}}>回到登录</button>
         </div>
       </div>
@@ -102,9 +109,11 @@ export default class Login extends Component {
   }
   verifySinAccount (type) {
     let user = this.props.user
+    console.log()
     let selector = $('#'+type)
     let val = selector.val()
-    if(user.val && val == user.val.loginname){
+    if(user[val] && val == user[val].loginname){
+      console.log('get in')
       selector.siblings('.fui-cross').attr('title', '用户名已被注册,请重新输入')
       selector.siblings('.fui-cross').show()
       this.setState({canAccount: false})
@@ -117,7 +126,6 @@ export default class Login extends Component {
       selector.siblings('.fui-cross').hide()
       this.setState({canAccount: true})
     }
-    this.verifyCanLogin()
   }
   verifySinPassword (type) {
     let selector = $('#' + type)
@@ -131,7 +139,6 @@ export default class Login extends Component {
       selector.siblings('.fui-cross').hide()
       this.setState({canPassword: true})
     }
-    this.verifyCanLogin()
   }
   verifySinRePassword (type) {
     let selector = $('#' + type)
@@ -146,7 +153,6 @@ export default class Login extends Component {
       selector.siblings('.fui-cross').hide()
       this.setState({canRePassword: true})
     }
-    this.verifyCanLogin()
   }
   clearAll (type) {
     let selector = $('#' + type)
@@ -154,22 +160,25 @@ export default class Login extends Component {
     selector.siblings('.fui-cross').hide()
   }
   singUp () {
-
-  }
-  verifyCanSinup (type) {
-    let canLogin = this.state.canLogin
-    if(!canLogin){
-      $('#' + type).css('cursor', 'not-allowed')
-    }else{
-      $('#' + type).css('cursor', 'pointer')
-    }
-  }
-  verifyCanLogin () {
-    let { canAccount, canPassword, canRePassword } = this.state
-    console.log(canPassword,canAccount,canRePassword)
+    const { canAccount, canPassword, canRePassword } = this.state
     if(canAccount && canPassword && canRePassword){
-      console.log('xxxxxxx')
-      this.setState({canLogin: true})
+      const account = $('#sinAccount').val()
+      const password = $('#sinPassword').val()
+      var obj = {
+        loginname: account,
+        password: password
+      }
+      conv.set('users:'+account,obj)
+      conv.save()
+      let status = this.props.status
+      let loginStatus = status.loginStatus
+      let user = this.props.user
+      user.account = obj
+      loginStatus.loging = true
+      setTimeout(() => {
+        dispatch(newStatus(status))
+      },200)
+      dispatch(newUser(user))
     }
   }
 }
