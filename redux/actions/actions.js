@@ -8,7 +8,8 @@ import {
   TODO,
   DIARY,
   SKIN,
-  STATUS
+  STATUS,
+  VIDEO
 } from './actionsTypes'
 
 
@@ -64,5 +65,11 @@ export function newStatus (status) {
   return {
     type: STATUS,
     status: status
+  }
+}
+export function newStatus (video) {
+  return {
+    type: VIDEO,
+    video: video
   }
 }

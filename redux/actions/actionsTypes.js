@@ -6,3 +6,4 @@ export const TODO = 'TODO'
 export const DIARY = 'DIARY'
 export const SKIN = 'SKIN'
 export const STATUS = 'STATUS'
+export const VIDEO = "VIDEO"

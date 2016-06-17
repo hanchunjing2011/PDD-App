@@ -6,11 +6,11 @@ export const welcome = {
   resizable: true
 }
 export const list = {
-  width:300,
-  height:300,
+  width:400,
+  height:400,
   frame: false,
   show: false,
-  resizable: false
+  resizable: true
 }
 
 export const todo = {
@@ -24,6 +24,31 @@ export const todo = {
 export const login = {
   width:800,
   height:600,
+  frame: false,
+  show: true
+}
+
+export const music = {
+  width:800,
+  height: 600,
+  frame: false,
+  show: true
+}
+export const photo = {
+  width:800,
+  height: 600,
+  frame: false,
+  show: true
+}
+export const video = {
+  width:800,
+  height: 600,
+  frame: false,
+  show: true
+}
+export const diary = {
+  width:800,
+  height: 600,
   frame: false,
   show: true
 }

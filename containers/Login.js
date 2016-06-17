@@ -6,6 +6,10 @@ import { newStatus, newUser } from '../redux/actions/actions'
 import $ from 'jquery'
 import { conv } from '../common/config'
 import cs from 'classnames'
+import { window_open, window_close } from '../communicate/communicationTypes'
+import { ipcRenderer } from 'electron'
+import { list } from '../renderProcess/winOptions'
+import Header1 from '../components/Header1'
 
 
 
@@ -37,6 +41,7 @@ export default class Login extends Component {
     let loging = loginStatus.loging
     return (
       <div className="LoginPage LoginPage-def drag">
+        <Header1 winID="login"></Header1>
         <div className="row container-box">
           <div className="col-sm-5">
             <img src="public/img/login/LoginPage-magic-box.png" width="200" height="200"/>
@@ -96,15 +101,30 @@ export default class Login extends Component {
     let status = this.props.status
     let loginStatus = status.loginStatus
     if(type == 'login'){
-
-    }else if(type == 'tosinup') {
+      const loginAccount = $('#loginAccount').val()
+      const loginPassword = $('#loginPassword').val()
+      const user = this.props.user
+      if(user[loginAccount]){
+        if(user[loginAccount].password == loginPassword){
+          setTimeout(() => {
+            ipcRenderer.send(window_close, {
+              winID: 'login'
+            })
+          }, 300)
+          setTimeout(() => {
+            ipcRenderer.send(window_open, {
+              winID: 'list',
+              options: list
+            }, 500)
+          })
+        }
+      }
+    }else if(type == 'tosinup'){
       loginStatus.loging = false
       dispatch(newStatus(status))
     }else if(type == 'tologin'){
       loginStatus.loging = true
       dispatch(newStatus(status))
-    }else if(type == 'sinup'){
-
     }
   }
   verifySinAccount (type) {

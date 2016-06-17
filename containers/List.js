@@ -6,8 +6,8 @@ import { conv } from '../common/config'
 import { skinConv } from '../common/skin'
 import { ipcRenderer } from 'electron'
 import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
-import { todo as todoOptions } from '../renderProcess/winOptions'
-
+import { todo, music, diary, photo, video } from '../renderProcess/winOptions'
+import Header1 from '../components/Header1'
 
 
 //这个是用来绑定state的   这边用不着  可以去掉
@@ -17,10 +17,10 @@ import { todo as todoOptions } from '../renderProcess/winOptions'
   }
 })
 export default class List extends Component {
-  constructor(){
+  constructor () {
     super()
   }
-  componentDidMount() {
+  componentDidMount () {
     $(document).ready(() => {
       let obj = {
         winID: 'list'
@@ -29,11 +29,35 @@ export default class List extends Component {
       ipcRenderer.send(window_focus, obj)
     })
   }
-  getIn(type){
-    if(type == 'todo'){
+  openWindow (winID) {
+    if(winID == 'music'){
       ipcRenderer.send(window_open, {
-        winID:'todo',
-        options: todoOptions
+        winID: winID,
+        options: music
+      })
+    }    
+    if(winID == 'todo'){
+      ipcRenderer.send(window_open, {
+        winID: winID,
+        options: todo
+      })
+    }    
+    if(winID == 'photo'){
+      ipcRenderer.send(window_open, {
+        winID: winID,
+        options: photo
+      })
+    }    
+    if(winID == 'diary'){
+      ipcRenderer.send(window_open, {
+        winID: winID,
+        options: diary
+      })
+    }    
+    if(winID == 'video'){
+      ipcRenderer.send(window_open, {
+        winID: winID,
+        options: video
       })
     }
   }
@@ -44,14 +68,13 @@ export default class List extends Component {
     const using = list.using
     return (
       <div className="ListPage drag ListPage-default">
+        <Header1 winID="list"></Header1>
         <div className="outBox">
-          <div className="wrap"><div className="func-icon first" title="酷爱音乐"></div></div>
-          <div className="wrap"><div className="func-icon second" title="精彩视频"></div></div>
-          <div className="wrap"><div className="func-icon third" title="任务卡片" onClick={() => {
-            this.getIn('todo')
-          }}></div></div>
-          <div className="wrap"><div className="func-icon forth" title="挽留瞬间"></div></div>
-          <div className="wrap"><div className="func-icon fifth" title="落笔回忆"></div></div>
+          <div className="wrap first" title="音乐-极致享受" onClick={() => {this.openWindow('music')}}><span className="glyphicon glyphicon-music"></span></div>
+          <div className="wrap second" title="电影-乐在其中" onClick={() => {this.openWindow('vedio')}}><span className="glyphicon glyphicon-film"></span></div>
+          <div className="wrap third" title="相册-情感回忆" onClick={() => {this.openWindow('photo')}}><span className="glyphicon glyphicon-picture"></span></div>
+          <div className="wrap forth" title="卡片-奋斗每一天" onClick={() => {this.openWindow('todo')}}><span className="glyphicon glyphicon-tag"></span></div>
+          <div className="wrap fifth" title="日记-点点滴滴" onClick={() => {this.openWindow('diary')}}><span className="glyphicon glyphicon-list-alt"></span></div>
         </div>
       </div>
     )

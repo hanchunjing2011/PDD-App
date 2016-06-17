@@ -3,27 +3,16 @@ import { store } from './redux/store/renderStore'
 import { render } from 'react-dom'
 import App from './containers/App'
 import Login from './containers/Login'
-// import TodoHome from './components/TodoHome'
 import Welcome from './containers/Welcome'
-// import List from './containers/List'
-// import Todo from './containers/Todo'
-// import MusicHome from './components/MusicHome'
-// import TodoEdit from './components/TodoEdit'
-// import TodoDone from './components/TodoDone'
-// import TodoDelete from './components/TodoDelete'
-// import TodoAdd from './components/ToMy doAdd'
-// import TodoDetail from './components/TodoDetail'
-// import VideoHome from './components/VedioHome'
-// import DiaryHome from './components/DiaryHome'
-// import PhotoHome from './components/PhotoHome'
-// import Setting from './components/Setting'
-// import Introduce from './components/Introduce'
+import List from './containers/List'
+import Todo from './containers/Todo'
+import Music from './containers/Music'
+import Video from './containers/Video'
+import Diary from './containers/Diary'
+import Photo from './containers/Photo'
 import { Router, Route } from 'react-router'
 import { Provider } from 'react-redux'
-// import { logger } from './common/log4js'
 import './renderProcess/appwin'
-// import './common/devtools'
-// import { openWelcome } from './common/desktop'
 import './public/css/App.scss'
 
 
@@ -42,6 +31,11 @@ render(
       <Route path="/" component={App} >
         <Route path="/welcome" component={ Welcome }/>
         <Route path="/login" component={ Login }/>
+        <Route path="/list" component={ List }/>
+        <Route path="/todo" component={ Todo }/>
+        <Route path="/diary" component={ Diary }/>
+        <Route path="/music" component={ Music }/>
+        <Route path="/video" component={ Video }/>
       </Route>
     </Router>
   </Provider>,

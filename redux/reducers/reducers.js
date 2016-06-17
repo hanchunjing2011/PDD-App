@@ -6,7 +6,8 @@ import {
   TODO,
   DIARY,
   SKIN,
-  STATUS
+  STATUS,
+  VIDEO
 } from '../actions/actionsTypes'
 
 // import { musicDB } from '../../common/musicDB'
@@ -84,7 +85,7 @@ let photoInit = {}
 let configInit = {}
 let todoInit = {}
 let diaryInit = {}
-
+let videoInit = {}
 
 //users
 let userInit = conv.get('users')
@@ -196,6 +197,15 @@ export function status (state = statusInit, action) {
   switch (action.type) {
     case STATUS:
       let nextState = Immutable.Map(state).merge(action.status).toJS()
+      return nextState
+    default:
+      return state
+  }
+}
+export function video (state = videoInit, action) {
+  switch (action.type) {
+    case VIDEO:
+      let nextState = Immutable.Map(state).merge(action.video).toJS()
       return nextState
     default:
       return state

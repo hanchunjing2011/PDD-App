@@ -7,7 +7,8 @@ import {
   todo,
   diary,
   skin,
-  status
+  status,
+  video
  } from './reducers'
 
 const rootReducer = combineReducers({
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   todo,
   diary,
   skin,
-  status
+  status,
+  video
 })
 
 export default rootReducer

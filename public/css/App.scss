@@ -15,25 +15,24 @@ body{font-family: "微软雅黑"; overflow: hidden;}
 
 //公共滚动条样式部分
 ::-webkit-scrollbar{
-  width: 9px;
+  width: 13px;
   height:9px;
 }
 ::-webkit-scrollbar-track{
-  background-color: transparent;
+  background-color: #ffffff;
 }
 ::-webkit-scrollbar-thumb{ /* 1 */
-  border-radius:10px!important;
-  background-color: #E4E1E1;
+  background-color: #C1C1C1;
   margin-right:3px;
 }
 :hover::-webkit-scrollbar-thumb { /* 2 */
-  background-color:#C5C2C2;
+  background-color: #C1C1C1;
 }
 ::-webkit-scrollbar-thumb:hover { /* 3 */
-  background-color: #C5C2C2;
+  background-color: #C1C1C1;
 }
 ::-webkit-scrollbar-thumb:active { /* 4 */
-  background-color: #908C8C;
+  background-color: #C1C1C1;
 }
 
 
@@ -66,6 +65,6 @@ ul{
 
 @import "./Welcome.scss";
 @import "./List.scss";
-@import "./Header.scss";
+@import "./Header1.scss";
 @import "./Todo.scss";
 @import "./Login.scss";
