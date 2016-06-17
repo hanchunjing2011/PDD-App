@@ -1,0 +1,67 @@
+.Header2{
+  border-bottom: 2px solid #0d772d;
+  z-index:1;
+  height:40px;
+  width:100%;
+  position:absolute;
+  top:0px;
+  left:0px;
+  text-align:center;
+  line-height:40px;
+  .header-title{
+    position: absolute;
+    left: 50%;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: -50px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000;
+  }
+  .header-icon{
+    float: right;
+    cursor: pointer;
+    width:40px;
+    height:40px;
+    span{
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+      text-align: center;
+      line-height: 40px;
+    }
+  }
+  .header-icon:hover{
+    background-color:#00a3e2;
+    span{
+      color:#fff;
+    }
+  }
+  .header-icon.close:hover{
+    span{
+      color:#fff;
+    }
+    background-color:#f45046;
+  }
+  .header-icon-left{
+    float:left;
+  }
+  .header-icon.person img{
+    display:block;
+    width:30px;
+    height:30px;
+    margin-top:5px;
+    border-radius:5px;
+    margin-left:5px;
+  }
+  .header-icon.close, .header-icon.min{
+    opacity:1;
+  }
+}
+
+.Header2-default{
+  .header-icon.person img{
+
+  }
+}

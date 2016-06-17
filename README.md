@@ -1,10 +1,10 @@
-### tech
+# Tech
 <ul>
   <li>生产环境:react+redux+electron+lowdb</li>
   <li>开发环境:webpack+babel</li>
   <li>electron有集成的audio和video,不存在mp3和mp4格式不支持问题</li>
 </ul>
-#项目中碰到的一些问题和解决思路
+# 项目中碰到的一些问题和解决思路
 <ul>
   <li>关于如何保证store的唯一性
     <ul>
@@ -62,9 +62,12 @@
   </li>
 </ul>
 
-### Features
-- [x] 搭建开发环境
-- [x] 注册校验功能
+# Features
+- [x] 搭建开发环境 webpack+electron+react+redux+lowdb(主要组成部分)
+- [x] 注册校验功能,登录功能
+- [x] 盒子功能选择界面
+- [x] 路由规划
+ 
 
 
 
@@ -72,8 +75,7 @@
 
 
 
-
-### Show
+# Show
 - [x] Login page show
 ![img](./public/img/login/LoginPage-def.jpg)
 

@@ -6,6 +6,17 @@
 	position:absolute;
 	top:0px;
 	left:0px;
+	.header-title{
+	  position: absolute;
+	  left: 50%;
+	  width: 100px;
+	  height: 40px;
+	  line-height: 40px;
+	  margin-left: -50px;
+	  font-size: 15px;
+	  font-weight: 500;
+	  color: #000;
+	}
 	.header-icon{
 		float: right;
 		cursor: pointer;

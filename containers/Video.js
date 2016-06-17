@@ -7,7 +7,7 @@ import { skinConv } from '../common/skin'
 import { ipcRenderer } from 'electron'
 import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
 import { todo as todoOptions } from '../renderProcess/winOptions'
-// import Header from '../components/Header'
+import Header2 from '../components/Header2'
 
 
 //这个是用来绑定state的   这边用不着  可以去掉
@@ -21,20 +21,28 @@ export default class Video extends Component {
     super()
   }
   componentDidMount() {
+
   }
   render(){
     return (
-      <div className="TodoPage drag TodoPage-default">
-        <div className="searchBox">
-          <input type="text" placeholder="输入您想要查找的关键词"/>
+      <div className="VideoPage drag VideoPage-default">
+        <Header2 winID="video"></Header2>
+        <div className="body">
+          <div className="left-part">
+            <ul>
+              <li></li>
+            </ul>
+          </div>
+          <div className="right-part">
+            <div className="video-box">
+              <video></video>
+              <div className="video-tool"></div>
+            </div>
+          </div>
         </div>
-        <div className="sortResult">
-          <ul>
-            <li>
-              <div className="choosed"></div>
-              <div className="item"></div>
-            </li>
-          </ul>
+        <div className="clear"></div>
+        <div className="foot">
+          <ul className="videoList"></ul>
         </div>
       </div>
     )

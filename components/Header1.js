@@ -24,8 +24,15 @@ export default class Header1 extends Component {
   }
   render(){
     const winID = this.props.winID
+    let headerTitle = ''
+    if(winID == 'login'){
+      headerTitle = 'LoginPage'
+    }else if(winID == 'list'){
+      headerTitle = 'FuncChoice'
+    }
     return (
       <div className="Header1 drag Header1-default">
+        <p className="header-title">{headerTitle}</p>
         { winID == 'login' && this.renderLogin()}
         { winID == 'list' && this.renderList()}
       </div>

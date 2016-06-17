@@ -16,7 +16,7 @@ import {
   maxWindowID,
   quitApp
 } from './mainProcess/listenEvent'
-import { todo } from './renderProcess/winOptions'
+import { video } from './renderProcess/winOptions'
 // import { logger } from './modules/logger'
 import { logger } from './common/logger'
 let dataGlobal = {}
@@ -24,8 +24,8 @@ dataGlobal.win = []
 
 app.on('ready', () => {
   logger.info('app is ready')
-  let newWin = openWindow(BrowserWindow, 'todo', todo)
-  dataGlobal.win['todo'] = newWin
+  let newWin = openWindow(BrowserWindow, 'video', video)
+  dataGlobal.win['video'] = newWin
 })
 
 // Quit when all windows are closed.
