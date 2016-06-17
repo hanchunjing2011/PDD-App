@@ -1,4 +1,4 @@
-#技术构成
+### tech
 <ul>
   <li>生产环境:react+redux+electron+lowdb</li>
   <li>开发环境:webpack+babel</li>
@@ -44,11 +44,38 @@
     <ul>
       <li>试了好久,就是不行,在import的时候有缺失</li>  
       <li>转投了一个bunyan,好像是国人开发的,我试试</li>   
+      <li>会出现一个警告,我消除不了,然后用了我自己开发的小型日志记录依赖库</li>   
+      <li>PDD-log4js-es5</li>   
     </ul>
   </li>
-    <li>暂时封存这个项目  骨架搭好了,也实现了几个页面,突然没兴趣了
+  <li>暂时封存这个项目  骨架搭好了,也实现了几个页面,突然没兴趣了
     <ul>
       <li>试了好久,就是不行,在import的时候有缺失</li>     
     </ul>
   </li>
+  <li>继续这个项目 
+    <ul>
+      <li>引入bootstrap</li>     
+      <li>引入flat-ui</li>          
+      <li>尽量风格统一</li>          
+    </ul>
+  </li>
 </ul>
+
+### Features
+- [x] 搭建开发环境
+- [x] 注册校验功能
+
+
+
+
+
+
+
+
+
+
+
+
+# License
+  MIT 
