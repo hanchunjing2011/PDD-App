@@ -41,7 +41,7 @@ export const photo = {
   show: true
 }
 export const video = {
-  width:800,
+  width:900,
   height: 600,
   frame: false,
   show: true
