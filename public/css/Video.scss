@@ -19,67 +19,6 @@
       height:100%;
       float:left;
       border-right:1px solid #054e3d;
-      .videoList{
-        max-height:400px;
-        min-height:400px;
-        width:100%;
-        max-height:100%;
-        min-height:100%;
-        .videoItem{
-          position:relative;
-          height:40px;
-          width:100%;
-          border-top:2px solid #2c3e50;
-          div.listitem{
-            float:left;
-          }
-          .itemhover{
-            position:absolute;
-            top:0px;
-            left:0px;
-            width:8px;
-            height:100%;
-          }
-          .itemtag{
-            height:100%;
-            width:40px;
-            span{
-              line-height:40px;
-              text-align:center;
-              padding-left:10px;
-              font-size:19px;
-            }
-          }
-          .itembody{
-            float:left;
-            width:165px;
-            height:40px;
-            .videoname{
-              width:100%;
-              height:40px;
-              margin:0px;
-              font-size:17px;
-              line-height:40px;
-              cursor:default;
-            }
-          }
-          .itemflag{
-            width:80px;
-            cursor:pointer;
-            span{
-              width:16px;
-              font-size:17px;
-              height:40px;
-              text-align:center;
-              line-height:40px;
-              float:left;
-            }
-          }
-        }
-        .videoItem:first-child{
-          border-top:0px;
-        }
-      }
     }
     .right-part{
       width:100%;
@@ -292,26 +231,6 @@
     }
     .left-part{
       background-color:#044838;
-      .videoList{
-        background-color:#4cbfa0;
-        .videoItem{
-          .itemhover{
-            background-color:#00a3e2;
-          }
-          .itemtag{                
-            color:#169375;
-          }
-          .itemflag{
-            color:#169375;
-          }
-          background-color:#34495e;
-          .itembody{
-            color:#169375;
-            .videoname{
-            }
-          }
-        }
-      }
     }
   }
 }
