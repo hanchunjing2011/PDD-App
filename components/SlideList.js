@@ -29,7 +29,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -45,7 +45,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -61,7 +61,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -77,7 +77,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -93,7 +93,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -109,7 +109,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -125,7 +125,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -141,7 +141,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -157,7 +157,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -173,7 +173,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -189,7 +189,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -205,7 +205,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>
@@ -221,7 +221,7 @@ export default class SlideList extends Component {
         <li className="videoItem nodrag">
           <div className="itemhover"></div>
           <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-tag"></span>
+            <span className="glyphicon glyphicon-film"></span>
           </div>
           <div className="listitem  itembody">
             <p className="videoname">建国伟业</p>

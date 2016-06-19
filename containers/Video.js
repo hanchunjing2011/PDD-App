@@ -9,6 +9,7 @@ import { window_show, window_close, window_focus, window_open } from '../communi
 import { todo as todoOptions } from '../renderProcess/winOptions'
 import Header2 from '../components/Header2'
 import SlideList from '../components/SlideList'
+import VideoToolbar from '../components/VideoToolbar'
 
 //这个是用来绑定state的   这边用不着  可以去掉
 @connect((state) => {
@@ -37,27 +38,7 @@ export default class Video extends Component {
             <div className="video-box">
               <span className="noplay glyphicon glyphicon-film"></span>
               <video id="video" className="video"></video>
-              <div className="video-tool">
-                <span className="toolspan play glyphicon glyphicon-play"></span>
-                <span className="toolspan pause glyphicon glyphicon-pause"></span>
-                <div className="progress-video-nav nodrag">
-                  <div className="progress-ball"></div>
-                  <div className="progress progress-video nodrag">
-                    <div className="progress-bar progress-bar-video"></div>
-                  </div>
-                </div>
-                <span className="nowtime">00:00</span>
-                <span className="split">/</span>
-                <span className="totaltime">05:00</span>
-                <span className="toolspan voice glyphicon glyphicon-volume-up">
-                  <div className="progress-ball-voice"></div>
-                  <div className="progress progress-voice">
-                    <div className="progress-bar progress-bar-voice"></div>
-                  </div>
-                </span>
-                <span className="toolspan large glyphicon glyphicon-unchecked"></span>
-                <span className="toolspan fullscreen glyphicon glyphicon-fullscreen"></span>
-              </div>
+              <VideoToolbar></VideoToolbar>
             </div>
           </div>
         </div>
