@@ -2,10 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import { render } from 'react-dom'
 import { connect } from 'react-redux'
 import $ from 'jquery'
-import { conv } from '../common/config'
 import { skinConv } from '../common/skin'
 import { ipcRenderer } from 'electron'
-import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
 
 
 //这个是用来绑定state的   这边用不着  可以去掉
@@ -60,7 +58,6 @@ export default class ScrollUpDown extends Component {
       <div className="ScrollUpDown drag ScrollUpDown-default">
         <div className="progress-ball"></div>
         <div className="progress-scrobar">
-          
         </div>
       </div>
     )

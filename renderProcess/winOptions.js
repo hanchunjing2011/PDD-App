@@ -14,8 +14,8 @@ export const list = {
 }
 
 export const todo = {
-  width:400,
-  height:600,
+  width:600,
+  height:800,
   frame: false,
   show: true,
   resizable: true

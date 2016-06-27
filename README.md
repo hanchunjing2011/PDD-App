@@ -62,12 +62,15 @@
   </li>
 </ul>
 
+# source from web
+- [x] http://laydate.layui.com/  日历插件
+- [x] http://www.gxtodo.com/web/#/task/list?version=person&id=699300 关于todoUI
+
 # Features
 - [x] 搭建开发环境 webpack+electron+react+redux+lowdb(主要组成部分)
 - [x] 注册校验功能,登录功能
 - [x] 盒子功能选择界面
 - [x] 路由规划
- 
 
 
 
