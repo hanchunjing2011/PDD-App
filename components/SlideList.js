@@ -26,212 +26,108 @@ export default class SlideList extends Component {
   render(){
     return (
       <ul className="SlideList nodrag SlideList-default">
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing odd">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing odd">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing odd">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">给我一首歌的时间</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-          </div>
-        </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-          </div>
-        </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-          </div>
-        </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-          </div>
-        </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-          </div>
-        </li>
-        <li className="videoItem nodrag">
-          <div className="itemhover"></div>
-          <div className="listitem itemtag">
-            <span className="glyphicon glyphicon-film"></span>
-          </div>
-          <div className="listitem  itembody">
-            <p className="videoname">建国伟业</p>
-          </div>
-          <div className="listitem itemflag">
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
-            <span className="glyphicon glyphicon-star"></span>
+        <li className="listitem playing odd">
+          <span className="play glyphicon glyphicon-play"></span>
+          <span className="pause glyphicon glyphicon-pause"></span>
+          <p className="songname">我的世界</p>
+          <span className="heart glyphicon glyphicon-heart"></span>
+          <div className="scort">
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
+            <span className="star glyphicon glyphicon-star"></span>
           </div>
         </li>
       </ul>

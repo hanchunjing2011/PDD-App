@@ -1,0 +1,37 @@
+.ScrollUpDown{
+  position:absolute;
+  height: 114px;
+  bottom: 30px;
+  left: 12px;
+  width: 10px;
+  border-radius:5px;
+  div{
+    position:absolute;
+  }
+  .progress-scrobar{
+    height:0px;
+    bottom:0px;
+    left:0px;
+    width:10px;
+    border-radius:5px;
+  }
+  .progress-ball{
+    position:absolute;
+    bottom:0px;
+    width:16px;
+    left:-3px;
+    border-radius:50%;
+    height:16px;
+    cursor:pointer;
+  }
+}
+
+.ScrollUpDown-default{
+  background-color:#c3c0c0;
+  .progress-scrobar{
+    background-color:#337ab7;
+  }
+  .progress-ball{
+    background-color:#337ab7;
+  }
+}

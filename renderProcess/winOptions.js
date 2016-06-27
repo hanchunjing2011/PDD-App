@@ -29,8 +29,8 @@ export const login = {
 }
 
 export const music = {
-  width:800,
-  height: 600,
+  width:830,
+  height: 580,
   frame: false,
   show: true
 }

@@ -6,7 +6,7 @@ import { ipcRenderer } from 'electron'
 import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
 import Header2 from '../components/Header2'
 import SlideList from '../components/SlideList'
-import MusicTopicBlock from '../components/MusicTopicBlock'
+import MusicFooter from '../components/MusicFooter'
 
 //这个是用来绑定state的   这边用不着  可以去掉
 @connect((state) => {
@@ -20,7 +20,7 @@ export default class Music extends Component {
   }
   componentDidMount() {
   }
-  render(){
+  render(){ 
     return (
       <div className="MusicPage drag MusicPage-default">
         <Header2 winID="music"></Header2>
@@ -29,8 +29,12 @@ export default class Music extends Component {
             <SlideList></SlideList>
           </div>
           <div className="right-part">
-            <MusicTopicBlock></MusicTopicBlock>
+            <div className="lypicBox"></div>
           </div>
+        </div>
+        <div className="clear"></div>
+        <div className="footer">
+          <MusicFooter></MusicFooter>
         </div>
       </div>
     )

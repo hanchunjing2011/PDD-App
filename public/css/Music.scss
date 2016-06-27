@@ -8,36 +8,48 @@
     position:relative;
     .body{
       width:100%;
-      height:400px;
+      height:480px;
       position:relative;
       .left-part{
-        overflow-y:scroll;
+        overflow-y:auto;
+        max-height:480px;
+        min-height:480px;
         position:absolute;
         top:0px;
         left:0px;
-        width:300px;
+        width:350px;
         height:100%;
+        ul,li{
+          margin-bottom:0px;
+        }
       }
       .right-part{
         width:100%;
         height:100%;
         padding:15px;
         padding-right:13px;
-        padding-left:313px;
+        padding-left:363px;
       }
+    }
+    .footer{
+      height:60px;
+      width:100%;
     }
 }
 
 
 .MusicPage-default{
-  background-image:url('../img/common/common-def-bg.png');
+  background-color:#5BB8FF;
   .body{
     .left-part{
-      background-color:#169375;
+      background-color:#dedede;
       border-right:1px solid #054e3d;
     }
     .right-part{
-      background-color:#169375;
+      background-image:url('../img/music/Music-default-lypic-bg.jpg');
     }
+  }
+  .footer{
+    background-color:#fff;
   }
 }

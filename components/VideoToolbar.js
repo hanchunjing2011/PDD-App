@@ -6,8 +6,7 @@ import { conv } from '../common/config'
 import { skinConv } from '../common/skin'
 import { ipcRenderer } from 'electron'
 import { window_show, window_close, window_focus, window_open } from '../communicate/communicationTypes'
-import { todo as todoOptions } from '../renderProcess/winOptions'
-
+import ScrollUpDown from './ScrollUpDown'
 
 //这个是用来绑定state的   这边用不着  可以去掉
 @connect((state) => {
@@ -42,10 +41,7 @@ export default class VideoToolbar extends Component {
           <span className="split">/</span>
           <span className="totaltime">05:00</span>
           <span className="toolspan voice glyphicon glyphicon-volume-up">
-            <div className="progress-ball-voice"></div>
-            <div className="progress progress-voice">
-              <div className="progress-bar progress-bar-voice"></div>
-            </div>
+            <ScrollUpDown></ScrollUpDown>
           </span>
           <span className="toolspan large glyphicon glyphicon-unchecked"></span>
           <span className="toolspan fullscreen glyphicon glyphicon-fullscreen"></span>
