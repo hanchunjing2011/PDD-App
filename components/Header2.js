@@ -31,16 +31,16 @@ export default class Header2 extends Component {
       headerTitle = 'Music Player'
     }else if(winID == 'todo'){
       title = "退出任务列表页"
-      headerTitle = 'Todo List'
+      headerTitle = 'TODO'
     }else if(winID == 'video'){
       title = "退出视频播放器"
-      headerTitle = 'Video Player'
+      headerTitle = 'VIDEO'
     }else if(winID == 'diary'){
       title = "退出日志"
       headerTitle = 'Diary Log'
     }else if(winID == 'photo'){
       title = "退出相册"
-      headerTitle = 'Photo Player'
+      headerTitle = 'PHOTO'
     }
     return (
       <div className="Header2 drag Header2-default">

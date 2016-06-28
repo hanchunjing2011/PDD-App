@@ -1,0 +1,23 @@
+.TimeCount{
+  margin-left:10px;
+  height:40px;
+  width:300px;
+  padding-top:5px;
+  span{
+    border-radius:3px;
+    display: inline-block;
+    float: left;
+    width: 20px;
+    height: 30px;
+    margin-left: 2px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #0078c1;
+    color: #fff;
+  }
+  span.maohao{
+    background-color:#fff;
+    color:#000;
+    margin-left:0px;
+  }
+}

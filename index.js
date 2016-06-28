@@ -6,7 +6,7 @@
 // }
 
 
-  load('dist/entry.js')
+load('dist/entry.js')
 
 
 

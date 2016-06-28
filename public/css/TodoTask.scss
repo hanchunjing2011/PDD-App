@@ -1,0 +1,232 @@
+.TodoTask{
+  width:100%;
+  height:100%;
+  padding:20px;
+  .TaskBox{
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+    dl{
+      width:100%;
+      min-height:40px;
+      border-bottom: 1px solid #E8E8E8;
+      line-height:40px;
+      margin-bottom:0px;
+      overflow:hidden;
+      dd.left{
+        width:10%;
+        height:100%;
+        text-align:right;
+        padding-right:12px;
+        float:left;
+        span{
+          width:40px;
+          height:40px;
+          text-align:center;
+          line-height:40px;
+          font-size:19px;
+        }
+      }
+      dd.right{
+        padding-left:5px;
+        width:90%;
+        height:100%;
+        text-align:left;
+        float:left;
+        p{
+          margin:0px;
+        }
+      }
+    }
+    dl.title{
+      dd.right{
+        div.showtitle{
+          width:100%;
+          min-height:40px;
+          padding-top:10px;
+          padding-right:3px;
+          text-align:justify;
+          padding-left:5px;
+        }
+      }
+    }
+    dl.important{
+      dd.right{
+        div.importBox{
+          float:left;
+          min-width:30px;
+          height:100%;
+          span.fui-radio-unchecked{
+            cursor:pointer;
+          }
+          span.fui-radio-unchecked,span.fui-radio-checked{
+            float:left;
+            width:30px;
+            height:40px;
+            text-align:center;
+            line-height:40px;
+          }
+          span.fui-radio-checked{
+            display:none;
+          }
+          .tip{
+            display:inline-block;
+            display:none;
+            min-width:60px;
+            color:#8e8b8b;
+          }
+        }
+        div.importBox.choosed{
+          min-width:90px;
+          span.fui-radio-unchecked{
+            display:none;
+          }
+          span.fui-radio-checked{
+            display:inline-block;
+          }
+          .tip{
+            display:inline-block;
+            height: 40px;
+            line-height: 40px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    dl.popular{
+      dd.right{
+        padding-left:10px;
+        span{
+          width:20px;
+          height:40px;
+          line-height:40px;
+          text-align:center;
+          font-size:17px;
+        }
+      }
+    }
+    dl.tags{
+      min-height:40px;
+      dd.right{
+        min-height:40px;
+        span.add{
+          float: left;
+          text-align: center;
+          line-height: 24px;
+          margin-left: 5px;
+          color: #fff;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          margin-top: 8px;
+          padding-left: 2px;
+        }
+      }
+    }
+    dl.about{
+      min-height:40px;
+      dd.right{
+        min-height:40px;
+        span.add{
+          float: left;
+          text-align: center;
+          line-height: 24px;
+          margin-left: 5px;
+          color: #fff;
+          width: 24px;
+          height: 24px;
+          cursor: pointer;
+          margin-top: 8px;
+          padding-left: 2px;
+        }
+      }
+    }
+  }
+}
+
+.TodoTask-default{
+  background-color:#ecebeb;
+  .TaskBox{
+    background-color:#fff;
+    dl.about{
+      dd.right{
+        span.add{
+          background-color: #9fc5dc;
+        }
+        span.add:hover{
+          background-color:#33607b;
+        }
+      }
+    }
+    dl.tags{
+      dd.right{
+        span.add{
+          background-color: #9fc5dc;
+        }
+        span.add:hover{
+          background-color:#33607b;
+        }
+      }
+    }
+    dl{
+      dd.left{
+        span.err{
+          color:red;
+        }
+        span.warn{
+          color:#fed160;
+        }
+        span.info{
+          color:#9bd6ff;
+        }
+        span.success{
+          color:#bee38c;
+        }
+      }
+      dd.right{
+        p.err{
+          background-color:#FFEDE7;
+        }
+        p.warn{
+          background-color:#ffefcb;
+        }
+        p.info{
+          background-color:#d6f4fe;
+        }
+        p.success{
+          background-color:#efd;
+        }
+        p{
+          color: #0c0c0c;
+        }
+        .importBox.err{
+          span[class^="fui"]{
+            color:red;
+          }
+        }
+        .importBox.warn{
+          span[class^="fui"]{
+            color:#fed160;
+          }
+        }
+        .importBox.info{
+          span[class^="fui"]{
+            color:#9bd6ff;
+          }
+        }
+        .importBox.success{
+          span[class^="fui"]{
+            color:#bee38c;
+          }
+        }
+      }
+    }
+    dl.popular{
+      dd.right{
+        span.empty:hover{
+
+        }
+      }
+    }
+  }
+}

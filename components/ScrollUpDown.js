@@ -57,8 +57,7 @@ export default class ScrollUpDown extends Component {
     return (
       <div className="ScrollUpDown drag ScrollUpDown-default">
         <div className="progress-ball"></div>
-        <div className="progress-scrobar">
-        </div>
+        <div className="progress-scrobar"></div>
       </div>
     )
   }

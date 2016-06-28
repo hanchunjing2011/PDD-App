@@ -10,6 +10,7 @@ import Music from './containers/Music'
 import Video from './containers/Video'
 import Diary from './containers/Diary'
 import Photo from './containers/Photo'
+import TodoTask from './containers/TodoTask'
 import { Router, Route } from 'react-router'
 import { Provider } from 'react-redux'
 import './renderProcess/appwin'
@@ -36,6 +37,7 @@ render(
         <Route path="/diary" component={ Diary }/>
         <Route path="/music" component={ Music }/>
         <Route path="/video" component={ Video }/>
+        <Route path="/todotask" component={ TodoTask }/>
       </Route>
     </Router>
   </Provider>,

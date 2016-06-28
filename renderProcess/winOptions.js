@@ -52,3 +52,9 @@ export const diary = {
   frame: false,
   show: true
 }
+export const todotask = {
+  width:400,
+  height:450,
+  frame: false,
+  show: true
+}

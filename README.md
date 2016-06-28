@@ -71,6 +71,11 @@
 - [x] 注册校验功能,登录功能
 - [x] 盒子功能选择界面
 - [x] 路由规划
+- [x] 所有page container的搭建
+- [x] music UI 实现
+- [x] 音量调节组件
+- [x] 进度条组件
+- [x] Header1 Header2组件
 
 
 
@@ -80,7 +85,9 @@
 
 # Show
 - [x] Login page show
-![img](./public/img/login/LoginPage-def.jpg)
+![img](./public/img/login/Login-show.jpg)
+- [x] List page show
+![img](./public/img/list/List-show.jpg)
 
 
 

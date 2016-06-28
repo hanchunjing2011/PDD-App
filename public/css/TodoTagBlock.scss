@@ -1,0 +1,42 @@
+.TodoTagBlock{
+  float:left;
+  height:24px;
+  border:1px solid #cccccc;
+  position:relative;
+  margin-top:8px;
+  border-radius:3px;
+  margin-left:10px;
+  p{
+    height:100%;
+    font-size:15px;
+    line-height:22px;
+    color:#fff !important;
+    font-family:"htjy";
+    padding:2px;
+  }
+  .remove{
+    position:absolute;
+    cursor:pointer;
+    right:-5px;
+    top:-5px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    font-size: 9px;
+    width: 10p;
+  }
+}
+
+.TodoTagBlock-default{
+  background-color:#0078c1;
+  color:#fff;
+  .remove{
+    color: #fff;
+    background-color: #ea6254;
+  }
+  .remove:hover{
+    background-color:#f71d06;
+  }
+}
